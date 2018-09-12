@@ -12,6 +12,24 @@ namespace Grades.Test.Types
     public class ReferenceTypeTests
     {
         [TestMethod]
+        public void UppercaseString()
+        {
+            string name = "scott";
+            name = name.ToUpper();
+
+            Assert.AreEqual("SCOTT", name);
+        }
+
+        [TestMethod]
+        public void UppercaseString2()
+        {
+            string name = "scott";
+            name.ToUpper();
+
+            Assert.AreNotEqual("SCOTT",name);
+        }
+
+        [TestMethod]
         public void AddDayToDateTime2()
         {
             DateTime date = new DateTime(2015, 1, 1);
