@@ -13,6 +13,11 @@ namespace Grades
             grades = new List<float>();
         }
 
+        public void AddGrade(float grade)
+        {
+            grades.Add(grade);
+        }
+
         private List<float> grades;
 
         public string Name;
