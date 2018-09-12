@@ -12,6 +12,24 @@ namespace Grades.Test.Types
     public class ReferenceTypeTests
     {
         [TestMethod]
+        public void AddDayToDateTime2()
+        {
+            DateTime date = new DateTime(2015, 1, 1);
+            date.AddDays(1);
+
+            Assert.AreNotEqual(2, date.Day);
+        }
+
+        [TestMethod]
+        public void AddDayToDateTime()
+        {
+            DateTime date = new DateTime(2015,1,1);
+            date = date.AddDays(1);
+
+            Assert.AreEqual(2,date.Day);
+        }
+
+        [TestMethod]
         public void ValueTypesPassByValue()
         {
             int x = 46;
