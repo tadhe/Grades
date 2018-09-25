@@ -21,7 +21,6 @@ namespace Grades
             {
                 book.WriteGrades(outputfile);
                 book.WriteGrades(Console.Out);
-                //outputfile.Close();
             }
         }
 
