@@ -16,6 +16,8 @@ namespace Grades
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
+            book.WriteGrades(Console.Out);
+
             GradeStatistics stats = book.ComputeStatistics();
             Console.WriteLine(book.Name);
             WriteResult("Average", stats.AverageGrade);
@@ -23,6 +25,8 @@ namespace Grades
             WriteResult("Lowest", stats.LowestGrade);
             WriteResult(stats.Description, stats.LetterGrade);
         }
+
+
 
         static void WriteResult(string description, string result)
         {
