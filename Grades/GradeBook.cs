@@ -10,6 +10,7 @@ namespace Grades
     {
         public GradeBook()
         {
+            _name = "Empty";
             grades = new List<float>();
         }
 
@@ -30,10 +31,17 @@ namespace Grades
             {
                 if (!String.IsNullOrEmpty(value))
                 {
+                    if(_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
+
                     _name = value;
                 }
             }
         }
+
+        public NameChangedDelegate NameChanged;
 
         private string _name;
         public GradeStatistics ComputeStatistics()
