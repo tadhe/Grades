@@ -20,8 +20,22 @@ namespace Grades
 
         private List<float> grades;
 
-        public string Name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }
+        }
 
+        private string _name;
         public GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
