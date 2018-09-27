@@ -21,7 +21,7 @@ namespace Grades
             grades.Add(grade);
         }
 
-        private List<float> grades;
+        protected List<float> grades;
 
         public string Name
         {
@@ -57,6 +57,8 @@ namespace Grades
         private string _name;
         public GradeStatistics ComputeStatistics()
         {
+            Console.WriteLine("GradeBook::ComputeStatistics");
+
             GradeStatistics stats = new GradeStatistics();
 
             float sum = 0;
