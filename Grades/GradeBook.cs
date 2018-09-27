@@ -55,7 +55,7 @@ namespace Grades
         public event NameChangedDelegate NameChanged;
 
         private string _name;
-        public GradeStatistics ComputeStatistics()
+        public virtual GradeStatistics ComputeStatistics()
         {
             Console.WriteLine("GradeBook::ComputeStatistics");
 
